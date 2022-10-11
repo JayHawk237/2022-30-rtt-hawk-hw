@@ -76,51 +76,46 @@
 
 //----------------------------------------------------------------------------------------------------------------------------------------
 
-// create 3 properties that are set by the constructor
-// create 3 methods
-// instantiate 2 arraysof 3 pirates, name the arrays after your favorite pirate ships, jollyRoger and blackPearl
-// loop over each array and print 3 properties of each pirate
-
 //----------------------------------------------------------------------------------------------------------------------------------------
 
-class Crews {
-    constructor(crewName, captianName, shipName, wackyName, terrian) {
+// class Crews {
+//     constructor(crewName, captianName, shipName, wackyName, terrian) {
         
-        this.ship = shipName;
-        this.crew = crewName;
-        this.wacky = wackyName;
-        this.captian = captianName;
-        this.terrian = terrian;
-        this.shmates = ["Zoro", "Nami", "Usopp", "Sanji","Robin"]
-        this.olmates = ["Jim Hawking", "Melfina", "Aisha Clanclan", "Suzuka"]
-        this.glmates = ["Yoko", "Viral", "Leeron", "Dayakka", "Tetukan"]
+//         this.ship = shipName;
+//         this.crew = crewName;
+//         this.wacky = wackyName;
+//         this.captian = captianName;
+//         this.terrian = terrian;
+//         this.shmates = ["Zoro", "Nami", "Usopp", "Sanji","Robin"]
+//         this.olmates = ["Jim Hawking", "Melfina", "Aisha Clanclan", "Suzuka"]
+//         this.glmates = ["Yoko", "Viral", "Leeron", "Dayakka", "Tetukan"]
 
 
 
-    }
+//     }
 
-    pking() {
-        console.log("I'm going to be king of the pirates!")
-    }
-    luffy() {
-        console.log("If I give up now, I'm going to regret it.")
-    }
+//     pking() {
+//         console.log("I'm going to be king of the pirates!")
+//     }
+//     luffy() {
+//         console.log("If I give up now, I'm going to regret it.")
+//     }
 
-    starwind() {
-        console.log("It wouldn't be any fun otherwise! Let's do it!")
-    }
-    gene() {
-        console.log("Believe in yourself and create your own destiny. Don't fear fate.")
-    }
+//     starwind() {
+//         console.log("It wouldn't be any fun otherwise! Let's do it!")
+//     }
+//     gene() {
+//         console.log("Believe in yourself and create your own destiny. Don't fear fate.")
+//     }
 
-    gurren() {
-        console.log("Believe In The Kamina That Believe In You.")
-    }
-    simone() {
-        console.log("Sorry, There Are Just Some Things A Man Has To See.")
-    }
+//     gurren() {
+//         console.log("Believe In The Kamina That Believe In You.")
+//     }
+//     simone() {
+//         console.log("Sorry, There Are Just Some Things A Man Has To See.")
+//     }
 
-}
+// }
 
 
 // let strawhats = new Crews("Straw Hats ", "Monkey D Luffy ", "1000 Sunnys ", "Tony Tony Chopper ", "Red Line" )
@@ -157,23 +152,45 @@ class Crews {
 // console.log(gurrenlagann) 
 // gurrenlagann.simone()
 
-let crewmates = [{
-    name: ["Zoro", "Nami", "Usopp", "Sanji","Robin"]
+// instantiate 2 arrays of 3 pirates, name the arrays after your favorite pirate ships, jollyRoger and blackPearl
+class Pirates {
+       constructor(nameOfPirates, weaponOfPirates, mascotOfPirates) {
+        this.name  = nameOfPirates
+        this.weapon = weaponOfPirates
+        this.mascot = mascotOfPirates
+    }
   
-  },
-  {
-    name: ["Jim Hawking", "Melfina", "Aisha Clanclan", "Suzuka"]
-    
-  },
-  {
-    name: ["Yoko", "Viral", "Leeron", "Dayakka", "Tetukan"]
-  }
-]
-
-crewmates.forEach(myFunction);
-
-function crewmates(name) {
-  for (let ) {
-    console.log()
-  }
+    nameCall() {
+        console.log(`You be facing the mighty ${this.name}`)
+    }
+    weaponCall() {
+        console.log(`I'll run ye down with me trusty ${this.weapon} !`)
+    }
+    animalcall() {
+        console.log(`Come to me ye mangy ${this.mascot}!`)
+    }
 }
+
+const blackbeard = []
+const whitebeard = []
+
+blackbeard[0] = new Pirates("Pirate 1",   "sword", "monkey")
+blackbeard[1] = new Pirates("Pirate 2",   "pistol", "parrot")
+blackbeard[2] = new Pirates("Pirate 3", "whip", "dog")
+
+whitebeard[0] = new Pirates("Pirate A",  "dagger", "snake")
+whitebeard[1] = new Pirates("Pirate B",  "boomerang", "gator")
+whitebeard[2] = new Pirates("Pirate C",   "lance", "cat")
+
+
+
+const pirateShips = [blackbeard, whitebeard]
+console.log("Blackbeards vs Whitebeards")
+
+
+pirateShips.forEach(function(ship) {
+    for(let x = 0; x < ship.length; x++) {
+        console.log(ship[x])
+    }
+})
+
